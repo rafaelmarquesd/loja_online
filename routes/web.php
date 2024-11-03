@@ -22,11 +22,6 @@ Route::middleware(['auth', 'is_admin'])->group(function () {
     Route::resource('/admin/pedidos', PedidoController::class);
 });
 
-// Página de boas-vindas
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Dashboard - acessível apenas para usuários autenticados e verificados
 Route::get('/dashboard', function () {
     return view('dashboard');
